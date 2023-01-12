@@ -20,5 +20,10 @@ let package = Package(
                     ]
                 ),
                 dependencies: [.target(name: "CommandLineTool")]),
+        .plugin(
+            name: "SwiftFormatBuildTool",
+            capability: .buildTool(),
+            dependencies: [.target(name: "CommandLineTool")]
+       ),
     ]
 )
